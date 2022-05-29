@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -28,7 +26,7 @@ class _ReservationButtonState extends State<ReservationButton> {
               textColor: Colors.white,
               fontSize: 16.0);
         },
-        child: Text(
+        child: const Text(
           "قم بالحجز الان",
           style: TextStyle(
               color: Colors.white,

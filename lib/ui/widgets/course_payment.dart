@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
 class CoursePayment extends StatelessWidget {
@@ -10,7 +8,7 @@ class CoursePayment extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           "تكلفة الدورة",
           style: TextStyle(
             color: Colors.grey,
@@ -23,7 +21,7 @@ class CoursePayment extends StatelessWidget {
           padding: const EdgeInsets.only(top: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+            children: const [
               Text(
                 "الحجز العادي",
                 style: TextStyle(
@@ -47,7 +45,7 @@ class CoursePayment extends StatelessWidget {
           padding: const EdgeInsets.only(top: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+            children: const [
               Text(
                 "الحجز المميز",
                 style: TextStyle(
@@ -71,7 +69,7 @@ class CoursePayment extends StatelessWidget {
           padding: const EdgeInsets.only(top: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+            children: const [
               Text(
                 "الحجز السريع",
                 style: TextStyle(

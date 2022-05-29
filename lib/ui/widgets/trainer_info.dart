@@ -1,6 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
+import 'package:flutter_app_test/providers/reservation_provider.dart';
+import 'package:provider/provider.dart';
 
 class TrainerInfo extends StatelessWidget {
   const TrainerInfo({Key? key}) : super(key: key);
@@ -16,12 +16,15 @@ class TrainerInfo extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10),
               child: CircleAvatar(
                 maxRadius: 20,
-                backgroundColor: Colors.blue,
+                backgroundImage: NetworkImage(context
+                    .read<ReservationProvider>()
+                    .courseInfo!
+                    .trainerImg!),
               ),
             ),
             Text(
-              "اسم المدرب",
-              style: TextStyle(
+              context.read<ReservationProvider>().courseInfo!.trainerName!,
+              style: const TextStyle(
                 color: Colors.grey,
                 fontSize: 18,
                 fontFamily: 'Tajawal',
@@ -33,8 +36,8 @@ class TrainerInfo extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 10),
           child: Text(
-            "معلومات عن المدرب مثلا",
-            style: TextStyle(
+            context.read<ReservationProvider>().courseInfo!.trainerInfo!,
+            style: const TextStyle(
                 color: Colors.grey, fontSize: 18, fontFamily: 'Tajawal'),
           ),
         ),

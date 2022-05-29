@@ -1,6 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
+import 'package:flutter_app_test/providers/reservation_provider.dart';
+import 'package:provider/provider.dart';
 
 class CourseBriefing extends StatelessWidget {
   const CourseBriefing({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class CourseBriefing extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           "عن الدورة",
           style: TextStyle(
             color: Colors.grey,
@@ -22,8 +22,8 @@ class CourseBriefing extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 10),
           child: Text(
-            "معلومات عن الدورة",
-            style: TextStyle(
+            context.read<ReservationProvider>().courseInfo!.occasionDetail!,
+            style: const TextStyle(
               color: Colors.grey,
               fontSize: 18,
               fontFamily: 'Tajawal',
